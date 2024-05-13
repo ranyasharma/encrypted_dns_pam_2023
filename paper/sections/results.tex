@@ -4,11 +4,8 @@ In this section, we describe the results of our experiments.  We explore which
 non-mainstream resolvers are available; how
 the performance of mainstream resolvers compares to that of non-mainstream
 resolvers; and whether (and to what extent) encrypted DNS response time
-correlates to high network latency. As described
-in Section~\ref{sec:method}, our results represent measurements
-from October 2021; future work could perform ongoing
-measurements based on the measurement framework we have developed to validate
-and extend these results.
+correlates to high network latency. We also explore how resolvers perform 
+differently from home networks versus EC2 instances. 
 
 \subsection{Are Non-Mainstream Resolvers Available?}
 
@@ -58,18 +55,16 @@ Europe            & \begin{tabular}[c]{@{}l@{}}doh.bortzmeyer\\ doh.appliedpriva
 
 We first aimed to study the availability of encrypted DNS
 resolvers. 
-We received responses from most resolvers that we queried.  Table~\ref{tab:errors}
-shows the most common errors we received from attempting to communicate with
-the resolvers.\footnote{Due to a bug, we did not record one rare error type.}
-The most common errors were related
-to a failure to establish a connection.  It is likely
-that in many of these cases, the resolver itself was simply no longer
+We received responses from most resolvers that we queried. When trying to perform DoH queries from all vantage points,
+we received 5,098,281 successful responses and 311,351 errors. 
+The most common errors we received from attempting to communicate with
+the resolvers were related to a failure to establish a connection or a segmentation fault.
+It is likely that in many of these cases, the resolver itself was simply no longer
 operational; additional longitudinal measurements could confirm this
-hypothesis.  We did not receive a response from eleven resolvers:
-\texttt{dns1.dnscrypt.ca, dns2.dnscrypt.ca, doh.cleanbrowsing.org,
-doh.post-factum.tk, doh.linuxsec.org, doh.tiar.app, jp.tiar.app,
-doh.appliedprivacy.net, doh.bortzmeyer.fr, doh.chewbacca.meganerd.nl,
-doh.powerdns.org}. However, we only performed measurements at a single point
+hypothesis.  From the EC2 instances, we did not receive a response from 
+following resolvers: chewbacca.meganerd.nl, odoh-target-noads.alekberg.net,
+odoh-target-se.alekberg.net, odoh-target-noads-se.alekberg.net, odoh-target.alekberg.net.
+ However, we only performed measurements at a single point
 in time, and thus we lack enough measurements to draw general conclusions
 about the availability of these resolvers. Future work could extend this work
 to perform longitudinal measurements of availability of these

@@ -1,5 +1,4 @@
-\documentclass[runningheads]{llncs}
-
+\documentclass[conference=acm]{confpaper}
 % General
 % -------
 \usepackage[labelfont={small,bf},textfont={small,it},skip=1pt]{caption}
@@ -14,6 +13,7 @@
 \usepackage{float}
 \usepackage{cite}
 \usepackage{amssymb}
+\usepackage{pdflscape}
 \usepackage[skip=0.1cm]{parskip}
 
 \setlength{\textfloatsep}{0pt}
@@ -30,15 +30,24 @@
 
 \pagestyle{plain}
 
+
+%%%%%%%%%%%%%%%%%%%%  SPACE SAVINGS %%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[all=normal,wordspacing]{savetrees}
+
 %%%%%%%%%%%%%%%%%%%%  TITLE/AUTHORS  %%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 \title{Measuring the Availability and Response Times of Public Encrypted DNS Resolvers}
-\author{}
+\author{Paper \#14, \pageref{lastpage} pages}
 \institute{}
 
 %%%%%%%%%%%%%%%%%%%%  START OF DOCUMENT  %%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\input{abstract}
 
 \maketitle
 

@@ -88,6 +88,12 @@ outperforms \texttt{dns.cloudflare.com}; from Seoul, \texttt{dns.alidns.com} out
 \texttt{dns.google}, and \texttt{dns.cloudflare.com}; and from Ohio, \texttt{freedns.controld.com} outperforms \texttt{dns.google}
 and \texttt{dns.cloudflare.com}.
 
+We observe that the measurements performed from home network devices 
+demonstrate fewer variability than the measurements performed from EC2 instances, 
+especially the Seoul instance. Despite a few outliers, such as \texttt{doh.la.ahadns.net}, 
+the graphs do not demonstrate high variabiility. Notably, the median resolver response 
+times are almost identical for the home network and Ohio EC2 measurements. 
+
 \if 0
 \begin{figure}[t!]
     \subfigure[Home Devices.]{%
@@ -190,12 +196,3 @@ Frankfurt.  Similarly, as expected, Table~\ref{tab:UnconvEur} shows that the
 median response times of non-mainstream resolvers in Europe are much lower when
 measured from Frankfurt than the response times of those same resolvers
 measured from Seoul.
-
-\subsection{How Do Resolvers Perform from Home Networks than Data Centers?}
-
-We observe that the measurements performed from home network devices 
-demonstrate fewer variability than the measurements performed from EC2 instances, 
-especially the Seoul instance. Despite a few outliers, such as \texttt{doh.la.ahadns.net}, 
-the graphs do not demonstrate high variabiility. Notably, the median resolver response 
-times are almost identical for the home network and Ohio EC2 measurements. 
-

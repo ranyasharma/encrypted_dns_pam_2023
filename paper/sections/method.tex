@@ -33,13 +33,13 @@ writes the results to a JSON file.
 To provide a comparative assessment of DNS
 performance across DoH resolvers, we perform measurements across 91 DoH
 resolvers, grouped by their geographical locations—18 in North America, 13 in
-Asia, and 26 in Europe~\cite{dnscrypt}. 13 resolvers were unable to return a location. 
+Asia, and 33 in Europe~\cite{dnscrypt}. 6 resolvers were unable to return a location. 
 We employed MaxMind's GeoLite2 databases to geolocate each DoH resolver~\cite{maxmind}.
 
 We collect measurements via two sources—-home network devices and Amazon EC2 instances. 
 Both sources use the same measurement platform. This allows us to explore measurements from a wide variety
 of access networks. We performed continuous measurements on four devices deployed in a single apartment complex located in a 
-major metropolitan area between June 22--September 30, 2023. We designed our tests to run every few hours. We also performed our measurements on Amazon EC2 instances between September 19--October 16, 2023. 
+Chicago metropolitan area between June 22--September 30, 2023. We designed our tests to run every few hours. We also performed our measurements on Amazon EC2 instances between September 19--October 16, 2023. 
 After this 1 month experiment span, we continued to take measurements for 1-3 days per month. 
 The motivation behind this was to ensure that resolver performance did not change between October
 and the time of this submission. Those measurement spans were February 8--February 10, 2024, 

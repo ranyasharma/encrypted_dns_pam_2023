@@ -18,20 +18,20 @@ the resolvers were related to a failure to establish a connection or a segmentat
 We did not identify a consistent pattern of not receiving responses from a certain
 subset of resolvers each time the measurements ran. 
 
+\if 0
 \begin{figure}[t!]
-\hspace*{-1in}
 \begin{minipage}{1.35\textwidth}
     \subfigure[Home Devices (Local).]{%
-\includegraphics[width=0.32\linewidth]{figures/poah_NA.png}}%
+\includegraphics[width=0.32\columnwidth]{figures/poah_NA.png}}%
 \hfill%
 \subfigure[Ohio EC2 (Local).]{%
-\includegraphics[width=0.32\linewidth]{figures/ohio_NA.png}}%
+\includegraphics[width=0.32\columnwidth]{figures/ohio_NA.png}}%
 \hfill%
 \subfigure[Frankfurt EC2.]{%
-\includegraphics[width=0.32\linewidth]{figures/frankfurt_NA.png}}%
+\includegraphics[width=0.32\columnwidth]{figures/frankfurt_NA.png}}%
 \hfill%
 \subfigure[Seoul EC2.]{%
-\includegraphics[width=0.32\linewidth]{figures/seoul_NA.png}}%
+\includegraphics[width=0.32\columnwidth]{figures/seoul_NA.png}}%
     \caption{The DNS response time and ICMP ping time distributions for
     encrypted DNS resolvers located in North America, measured from global vantage points.
     Mainstream resolvers are shown in boldface across all three
@@ -39,6 +39,7 @@ subset of resolvers each time the measurements ran.
 \label{fig:dns-NA}
 \end{minipage}
 \end{figure}
+\fi
 
 \subsection{How Do Non-Mainstream Resolvers Perform?}
 
@@ -87,56 +88,50 @@ outperforms \texttt{dns.cloudflare.com}; from Seoul, \texttt{dns.alidns.com} out
 \texttt{dns.google}, and \texttt{dns.cloudflare.com}; and from Ohio, \texttt{freedns.controld.com} outperforms \texttt{dns.google}
 and \texttt{dns.cloudflare.com}.
 
+\if 0
 \begin{figure}[t!]
-\hspace*{-1in}
-\begin{minipage}{1.35\textwidth}
     \subfigure[Home Devices.]{%
-\includegraphics[width=0.32\linewidth]{figures/poah_europe.png}}%
+\includegraphics[width=0.32\columnwidth]{figures/poah_europe.png}}%
 \hfill%
 \subfigure[Ohio EC2.]{%
-\includegraphics[width=0.32\linewidth]{figures/ohio_eur.png}}%
+\includegraphics[width=0.32\columnwidth]{figures/ohio_eur.png}}%
 \hfill%
 \subfigure[Frankfurt EC2 (Local).]{%
-\includegraphics[width=0.32\linewidth]{figures/frankfurt_eur.png}}%
+\includegraphics[width=0.32\columnwidth]{figures/frankfurt_eur.png}}%
 \hfill%
 \subfigure[Seoul EC2.]{%
-\includegraphics[width=0.32\linewidth]{figures/seoul_eur.png}}%
+\includegraphics[width=0.32\columnwidth]{figures/seoul_eur.png}}%
     \caption{The DNS response time and ICMP ping time distributions for
     encrypted DNS resolvers located in Europe, measured from global vantage points.
     Mainstream resolvers are shown in boldface across all three
     sub-figures.}
 \label{fig:dns-europe}
-\end{minipage}
 \end{figure}
 
 
-
 \begin{figure}[t!]
-\hspace*{-1in}
-\begin{minipage}{1.35\textwidth}
     \subfigure[Home Devices.]{%
-\includegraphics[width=0.32\linewidth]{figures/poah_asia.png}}%
+\includegraphics[width=0.32\columnwidth]{figures/poah_asia.png}}%
 \hfill%
 \subfigure[Ohio EC2.]{%
-\includegraphics[width=0.32\linewidth]{figures/ohio_asia.png}}%
+\includegraphics[width=0.32\columnwidth]{figures/ohio_asia.png}}%
 \hfill%
 \subfigure[Frankfurt EC2.]{%
-\includegraphics[width=0.32\linewidth]{figures/frankfurt_asia.png}}%
+\includegraphics[width=0.32\columnwidth]{figures/frankfurt_asia.png}}%
 \hfill%
 \subfigure[Seoul EC2 (Local).]{%
-\includegraphics[width=0.32\linewidth]{figures/seoul_asia.png}}%
+\includegraphics[width=0.32\columnwidth]{figures/seoul_asia.png}}%
     \caption{The DNS response time and ICMP ping time distributions for
     encrypted DNS resolvers located in Asia, measured from global vantage points.
     Mainstream resolvers are shown in boldface across all three
     sub-figures.}
 \label{fig:dns-asia}
-\end{minipage}
 \end{figure}
+\fi
 
 \begin{table}[t!]
-\hspace*{-0.75in}
-\begin{minipage}{1.25\linewidth}
-\parbox{0.45\linewidth}{
+\begin{minipage}{1.25\columnwidth}
+\parbox{0.45\columnwidth}{
 \begin{scriptsize}
 \centering
 \begin{tabular}{l|rr}
@@ -158,7 +153,7 @@ public.dns.iij.jp                              & 39.5                           
 %\end{table}
 %\begin{table}[t!]
 \centering
-\parbox{0.45\linewidth}{
+\parbox{0.45\columnwidth}{
 \begin{scriptsize}
 \begin{tabular}{l|rr}
 \toprule

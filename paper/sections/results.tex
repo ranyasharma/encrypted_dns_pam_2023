@@ -72,7 +72,7 @@ median query response times.
 From the Chicago home network devices, response times from resolvers went all the way up to 
 399~ms, identified as much above typical DNS lookup response times.
 From the Ohio vantage point, the maximum response time from a resolver was 270~ms; from Seoul,
-the maximum response time from a resolver was __~ms; from Frankfurt, the maximum response time from a resolver was 380~ms. 
+the maximum response time from a resolver was 569~ms; from Frankfurt, the maximum response time from a resolver was 380~ms. 
 We observe more consistent performance for resolvers located in Europe, but we still 
 note high variability from the Seoul vantage point. 
 
@@ -144,11 +144,11 @@ and \texttt{dns.cloudflare.com}.
     \textbf{Resolver} & \multicolumn{2}{c}{\textbf{Vantage Point}} \\
                   & \textrm{Seoul (ms)}         & \textrm{Frankfurt (ms)} \\
 \midrule
-dns.twnic.tw                                & 31606.61 & 32319.90                            \\
-doh-jp.blahdns.com                          & 109.62                                           & 773.47                              \\
-sg.yepdns.com                               & 238.01                                           & 548.67                              \\
-public.dns.iij.jp                           & 200.82                                           & 496.74                             \\
-doh-sg.blahdns                              & 214.44                                           & 534.51                               \\
+antivirus.bebasid.com                                & 99 & 380                            \\
+dns.twnic.tw                          & 59                                          & 290                              \\
+dnslow.me                                & 29                                           & 240                              \\
+jp.tiar.app                            & 39                                           & 250                             \\
+public.dns.iij.jp                              & 39.5                                           & 250                               \\
 \bottomrule
 \end{tabular}
 \end{scriptsize}
@@ -165,11 +165,11 @@ doh-sg.blahdns                              & 214.44                            
 \textbf{Resolver} & \multicolumn{2}{c}{\textbf{Vantage Point}} \\
                   & \textrm{Frankfurt (ms)}     & \textrm{Seoul (ms)} \\
 \midrule
-doh.ffmuc.net                               & 108.92 & 1309.88                         \\
-ibksturm.synology.me                        & 132.66 & 1254.47                         \\
-dns-doh-no-safe-search.dnsforfamily         & 135.88 & 1159.70                         \\
-dnsforge.de                                 & 31.86 & 1043.03                         \\
-dns-doh.dnsforfamily                        & 155.81 & 1162.27                         \\
+doh.ffmuc.net                               & 70 & 569                         \\
+dns0.eu                        & 20 & 399                         \\
+open.dns0.eu         & 10 & 324                         \\
+kids.dns0.eu                                 & 10 & 309                         \\
+dns.njal.la                        & 20 & 289                         \\
 \bottomrule
 \end{tabular}
 \end{scriptsize}

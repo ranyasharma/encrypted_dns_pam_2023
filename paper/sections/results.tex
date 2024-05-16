@@ -20,7 +20,10 @@ subset of resolvers each time the measurements ran.
 
 \begin{figure}[h!]
 \includegraphics[width=\columnwidth]{ohio_NA}
-\caption{Ohio EC2 (Local).}
+\caption{The DNS response time and ICMP ping time distributions for
+    encrypted DNS resolvers located in North America, measured from an EC2
+    instance in Ohio.  The plots show distributions for both DNS response times
+    and ICMP round-trip latency.}
     \label{fig:dns-us-ohio}
 \end{figure}
 
@@ -37,30 +40,32 @@ given that most organizations who have deployed mainstream resolvers are based
 in the United States, we also wanted to explore how the performance of a
 broader set of encrypted DNS resolvers varied by geography.
 
-Figures~\ref{fig:dns-us}--\ref{fig:dns-europe} show the distributions of DNS
-response times and ICMP ping times across encrypted DNS resolvers located across continents, as measured
-from vantage points in the United States, Asia, and Europe, respectively. The
-plots show distributions for both DNS response times and ICMP round-trip latency. 
-Although some distributions extend beyond 600~ms, we have truncated the plots
-for ease of exposition, since responses beyond this range will not result in
-good application performance.
-Certain resolvers did not respond to our ICMP ping probes; for those
-resolvers, no latency data is shown.
-
-
+Figure~\ref{fig:dns-us-ohio} shows the distributions of DNS response times and
+ICMP ping times across encrypted DNS resolvers located in North America, as
+measured from an EC2 instance in Ohio.  The plots show distributions for both
+DNS response times and ICMP round-trip latency.  Although some distributions
+extend beyond 600~ms, we have truncated the plots for ease of exposition,
+since responses beyond this range will not result in good application
+performance.  Certain resolvers did not respond to our ICMP ping probes; for
+those resolvers, no latency data is shown.
 As expected, most mainstream resolvers outperformed non-mainstream resolvers
-from most vantage points.
-Non-mainstream resolvers also exhibited higher variability of 
-median query response times.  
+from most vantage points.  Non-mainstream resolvers also exhibited higher
+variability of median query response times.  
+From the Chicago home network devices, response times from resolvers were as
+high as 399~ms, identified as much above typical DNS lookup response times.
+From the Ohio vantage point, the maximum response time from a resolver was 270~ms. 
 
-From the Chicago home network devices, response times from resolvers went all the way up to 
-399~ms, identified as much above typical DNS lookup response times.
-From the Ohio vantage point, the maximum response time from a resolver was 270~ms; from Seoul,
-the maximum response time from a resolver was 569~ms; from Frankfurt, the maximum response time from a resolver was 380~ms. 
-We observe more consistent performance for resolvers located in Europe, but we still 
-note high variability from the Seoul vantage point. 
+We also explored the distributions of DNS response times and ICMP ping times
+across encrypted DNS resolvers located across continents, as measured from
+vantage points in the United States, Asia, and Europe, respectively.  From
+Seoul, the maximum response time from a resolver was 569~ms; from Frankfurt,
+the maximum response time from a resolver was 380~ms.  We observe more
+consistent performance for resolvers located in Europe, but we still note high
+variability from the Seoul vantage point.
+Figures~\ref{fig:dns-us}--\ref{fig:dns-europe} in the Appendix show all of
+these results in more detail.
 
-In some cases, however, a particular non-mainstream resolver would outperform
+In some cases, one particular non-mainstream resolver would outperform
 the mainstream DoH resolvers.  As expected, \texttt{dns.quad9.net},
 \texttt{dns.google}, and \texttt{dns.cloudflare.com} were among the top five
 highest performing DoH resolvers in North America, Europe, and Asia.

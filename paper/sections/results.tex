@@ -7,8 +7,7 @@ resolvers; and whether (and to what extent) encrypted DNS response time
 correlates to high network latency. We also explore how resolvers perform 
 differently from home networks versus EC2 instances. 
 
-\subsection{Are Non-Mainstream Resolvers Available?}
-
+\paragraph{Are Non-Mainstream Resolvers Available?}
 We first aimed to study the availability of encrypted DNS
 resolvers. 
 We received responses from most resolvers that we queried. When trying to perform DoH queries from all vantage points,
@@ -41,8 +40,7 @@ subset of resolvers each time the measurements ran.
 \end{figure}
 \fi
 
-\subsection{How Do Non-Mainstream Resolvers Perform?}
-
+\paragraph{How Do Non-Mainstream Resolvers Perform?}
 Given the large number of non-mainstream resolvers that have not been
 previously studied, we aimed to study how
 the performance of these encrypted DNS resolvers compared to mainstream ones.
@@ -94,51 +92,78 @@ especially the Seoul instance. Despite a few outliers, such as \texttt{doh.la.ah
 the graphs do not demonstrate high variabiility. Notably, the median resolver response 
 times are almost identical for the home network and Ohio EC2 measurements. 
 
-\if 0
-\begin{figure}[t!]
-    \subfigure[Home Devices.]{%
-\includegraphics[width=0.32\columnwidth]{figures/poah_europe.pdf}}%
-\hfill%
-\subfigure[Ohio EC2.]{%
-\includegraphics[width=0.32\columnwidth]{figures/ohio_eur.pdf}}%
-\hfill%
-\subfigure[Frankfurt EC2 (Local).]{%
-\includegraphics[width=0.32\columnwidth]{figures/frankfurt_eur.pdf}}%
-\hfill%
-\subfigure[Seoul EC2.]{%
-\includegraphics[width=0.32\columnwidth]{figures/seoul_eur.pdf}}%
-    \caption{The DNS response time and ICMP ping time distributions for
+\begin{figure*}[t!]
+\centering
+%
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{figures/poah_europe.png}
+\caption{U.S. Home Networks}
+\label{fig:subfiga}
+\end{subfigure}
+%
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{figures/ohio_eur.png}
+\caption{Ohio EC2.}
+\label{fig:subfigb}
+\end{subfigure}
+%
+\hfill \\
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{figures/frankfurt_eur.png}
+    \caption{Frankfurt EC2 (Local).}
+\label{fig:subfigb}
+\end{subfigure}
+%
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{figures/seoul_eur.png}
+\caption{Seoul EC2.}
+\label{fig:subfigb}
+\end{subfigure}
+\caption{The DNS response time and ICMP ping time distributions for
     encrypted DNS resolvers located in Europe, measured from global vantage points.
     Mainstream resolvers are shown in boldface across all three
     sub-figures.}
 \label{fig:dns-europe}
-\end{figure}
+\end{figure*}
 
 
-\begin{figure}[t!]
-    \subfigure[Home Devices.]{%
-\includegraphics[width=0.32\columnwidth]{figures/poah_asia.pdf}}%
-\hfill%
-\subfigure[Ohio EC2.]{%
-\includegraphics[width=0.32\columnwidth]{figures/ohio_asia.pdf}}%
-\hfill%
-\subfigure[Frankfurt EC2.]{%
-\includegraphics[width=0.32\columnwidth]{figures/frankfurt_asia.pdf}}%
-\hfill%
-\subfigure[Seoul EC2 (Local).]{%
-\includegraphics[width=0.32\columnwidth]{figures/seoul_asia.pdf}}%
-    \caption{The DNS response time and ICMP ping time distributions for
+\begin{figure*}[t!]
+\centering
+%
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{figures/poah_asia.png}
+\caption{U.S. Home Networks}
+\label{fig:subfiga}
+\end{subfigure}
+%
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{figures/ohio_asia.png}
+\caption{Ohio EC2.}
+\label{fig:subfigb}
+\end{subfigure}
+%
+\hfill \\
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{figures/frankfurt_asia.png}
+    \caption{Frankfurt EC2.}
+\label{fig:subfigb}
+\end{subfigure}
+%
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{figures/seoul_asia.png}
+    \caption{Seoul EC2 (Local).}
+\label{fig:subfigb}
+\end{subfigure}
+\caption{The DNS response time and ICMP ping time distributions for
     encrypted DNS resolvers located in Asia, measured from global vantage points.
     Mainstream resolvers are shown in boldface across all three
     sub-figures.}
-\label{fig:dns-asia}
-\end{figure}
-\fi
+\label{fig:dns-europe}
+\end{figure*}
+
+
 
 \begin{table}[t!]
-\begin{minipage}{1.25\columnwidth}
-\parbox{0.45\columnwidth}{
-\begin{scriptsize}
 \centering
 \begin{tabular}{l|rr}
 \toprule
@@ -152,15 +177,12 @@ jp.tiar.app                            & 39                                     
 public.dns.iij.jp                              & 39.5                                           & 250                               \\
 \bottomrule
 \end{tabular}
-\end{scriptsize}
     \caption{Median DNS response times for non-mainstream resolvers (Asia).}
 \label{tab:UnconvAsia}
-}\hfill
-%\end{table}
-%\begin{table}[t!]
+\end{table}
+
+\begin{table}[t!]
 \centering
-\parbox{0.45\columnwidth}{
-\begin{scriptsize}
 \begin{tabular}{l|rr}
 \toprule
 \textbf{Resolver} & \multicolumn{2}{c}{\textbf{Vantage Point}} \\
@@ -173,11 +195,8 @@ kids.dns0.eu                                 & 10 & 309                         
 dns.njal.la                        & 20 & 289                         \\
 \bottomrule
 \end{tabular}
-\end{scriptsize}
     \caption{Median DNS response times for non-mainstream resolvers (Europe).}
 \label{tab:UnconvEur}
-}
-\end{minipage}
 \end{table}
 
 

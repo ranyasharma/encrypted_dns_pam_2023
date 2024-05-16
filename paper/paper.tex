@@ -6,7 +6,6 @@
 \usepackage{booktabs}
 \usepackage{caption}
 \usepackage{tabularx}
-%\usepackage{subfigure}
 \usepackage[normalem]{ulem}
 \usepackage{fancyref}
 \usepackage{xcolor}
@@ -14,9 +13,9 @@
 \usepackage{cite}
 \usepackage{amssymb}
 \usepackage{pdflscape}
-\usepackage[skip=0.1cm]{parskip}
 
-\setlength{\textfloatsep}{0pt}
+%\usepackage[skip=0.1cm]{parskip}
+%\setlength{\textfloatsep}{0pt}
 %\titlespacing*{\section}{0pt}{1.1\baselineskip}
 
 \useunder{\uline}{\ul}{}
@@ -31,7 +30,7 @@
 
 %%%%%%%%%%%%%%%%%%%%  SPACE SAVINGS %%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[all=normal,wordspacing]{savetrees}
+%\usepackage[all=normal,wordspacing]{savetrees}
 
 %%%%%%%%%%%%%%%%%%%%  TITLE/AUTHORS  %%%%%%%%%%%%%%%%%%%%%
 
@@ -42,24 +41,24 @@
 
 \begin{document}
 
+\begin{sloppypar}
 \input{abstract}
 
 \maketitle
 
-\begin{sloppypar}
-\input{sections/abstract}
-\input{sections/introduction}
-\input{sections/background}
-\input{sections/method}
-\input{sections/results}
-\balance\label{lastpage}\input{sections/conclusion}
+\input{abstract}
+\input{introduction}
+\input{background}
+\input{method}
+\input{results}
+\balance\label{lastpage}\input{conclusion}
 
 \pagebreak
-\bibliographystyle{splncs04}
+\bibliographystyle{abbrv}
 \bibliography{paper}
 
 \pagebreak
-\input{sections/appendix}
+\input{appendix}
 
 \end{sloppypar}
 \end{document}

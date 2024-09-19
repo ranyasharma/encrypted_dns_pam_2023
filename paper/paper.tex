@@ -1,4 +1,4 @@
-\documentclass[conference=acm]{confpaper}
+\documentclass[runningheads]{llncs}
 % General
 % -------
 \usepackage[labelfont={small,bf},textfont={small,it},skip=1pt]{caption}
@@ -35,30 +35,30 @@
 %%%%%%%%%%%%%%%%%%%%  TITLE/AUTHORS  %%%%%%%%%%%%%%%%%%%%%
 
 \title{Global Measurements of the Availability and Response Times of Public Encrypted DNS Resolvers}
-\author{Paper \#14, \pageref{lastpage} pages}
-
+\author{}
+\institute{}
 %%%%%%%%%%%%%%%%%%%%  START OF DOCUMENT  %%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 \begin{sloppypar}
-\input{abstract}
+\input{sections/abstract}
 
 \maketitle
 
-\input{abstract}
-\input{introduction}
-\input{background}
-\input{method}
-\input{results}
-\balance\label{lastpage}\input{conclusion}
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/background}
+\input{sections/method}
+\input{sections/results}
+\balance\label{lastpage}\input{sections/conclusion}
 
 \pagebreak
 \bibliographystyle{abbrv}
 \bibliography{paper}
 
 \pagebreak
-\input{appendix}
+\input{sections/appendix}
 
 \end{sloppypar}
 \end{document}

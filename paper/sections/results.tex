@@ -13,7 +13,7 @@ resolvers.
 We received responses from most resolvers that we queried. When trying to perform DoH queries from all vantage points,
 we received 5,098,281 successful responses and 311,351 errors. 
 The most common errors we received from attempting to communicate with
-the resolvers were related to a failure to establish a connection or a segmentation fault.
+the resolvers were related to a failure to establish a connection.
 We did not identify a consistent pattern of not receiving responses from a certain
 subset of resolvers each time the measurements ran. 
 
@@ -80,8 +80,8 @@ and \texttt{dns.cloudflare.com}.
 We observe that the measurements performed from home network devices 
 demonstrate fewer variability than the measurements performed from EC2 instances, 
 especially the Seoul instance. Despite a few outliers, such as \texttt{doh.la.ahadns.net}, 
-the graphs do not demonstrate high variabiility. Notably, the median resolver response 
-times are almost identical for the home network and Ohio EC2 measurements. 
+the graphs do not demonstrate high variability. In fact, \texttt{doh.la.ahadns.net} has significant response times and variability in the home network measurements, but very little variability in the EC2 measurements. It is worth noting that resolver performance can vary across measurements collected on virtual instances versus home networks. Furthermore, \texttt{dns.twnic.tw} demonstrates high ping times and response times from the home network measurements, but low times and variability from the EC2 measurements. Conversely, \texttt{antivirus.bebasid.com} has high variability from the Ohio and Frankfurt EC2 instances, but low variability from the home network devices. 
+Except for these cases, the median resolver response times are almost identical for the home network and Ohio EC2 measurements. 
 
 \begin{table}[t!]
 \centering

@@ -1,4 +1,4 @@
-\documentclass[conference=acm]{confpaper}
+\documentclass[runningheads]{llncs}
 % General
 % -------
 \usepackage[labelfont={small,bf},textfont={small,it},skip=1pt]{caption}
@@ -13,6 +13,8 @@
 \usepackage{cite}
 \usepackage{amssymb}
 \usepackage{pdflscape}
+\usepackage{balance}
+\usepackage{subcaption}
 
 %\usepackage[skip=0.1cm]{parskip}
 %\setlength{\textfloatsep}{0pt}
@@ -34,31 +36,30 @@
 
 %%%%%%%%%%%%%%%%%%%%  TITLE/AUTHORS  %%%%%%%%%%%%%%%%%%%%%
 
-\title{Global Measurements of the Availability and Response Times of Public Encrypted DNS Resolvers}
-\author{Paper \#14, \pageref{lastpage} pages}
-
+\title{Global Measurements of the Availability and Response Times of \\ Public Encrypted DNS Resolvers}
+\author{}
+\institute{}
 %%%%%%%%%%%%%%%%%%%%  START OF DOCUMENT  %%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 \begin{sloppypar}
-\input{abstract}
 
 \maketitle
 
-\input{abstract}
-\input{introduction}
-\input{background}
-\input{method}
-\input{results}
-\balance\label{lastpage}\input{conclusion}
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/background}
+\input{sections/method}
+\input{sections/results}
+\label{lastpage}\input{sections/conclusion}
 
 \pagebreak
 \bibliographystyle{abbrv}
 \bibliography{paper}
 
 \pagebreak
-\input{appendix}
+\input{sections/appendix}
 
 \end{sloppypar}
 \end{document}

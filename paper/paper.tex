@@ -13,6 +13,8 @@
 \usepackage{cite}
 \usepackage{amssymb}
 \usepackage{pdflscape}
+\usepackage{balance}
+\usepackage{subcaption}
 
 %\usepackage[skip=0.1cm]{parskip}
 %\setlength{\textfloatsep}{0pt}
@@ -34,7 +36,7 @@
 
 %%%%%%%%%%%%%%%%%%%%  TITLE/AUTHORS  %%%%%%%%%%%%%%%%%%%%%
 
-\title{Global Measurements of the Availability and Response Times of Public Encrypted DNS Resolvers}
+\title{Global Measurements of the Availability and Response Times of \\ Public Encrypted DNS Resolvers}
 \author{}
 \institute{}
 %%%%%%%%%%%%%%%%%%%%  START OF DOCUMENT  %%%%%%%%%%%%%%%%%
@@ -42,7 +44,6 @@
 \begin{document}
 
 \begin{sloppypar}
-\input{sections/abstract}
 
 \maketitle
 
@@ -51,7 +52,7 @@
 \input{sections/background}
 \input{sections/method}
 \input{sections/results}
-\balance\label{lastpage}\input{sections/conclusion}
+\label{lastpage}\input{sections/conclusion}
 
 \pagebreak
 \bibliographystyle{abbrv}

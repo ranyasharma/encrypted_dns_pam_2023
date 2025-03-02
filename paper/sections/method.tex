@@ -74,7 +74,12 @@ measure the performance of a larger set of encrypted DNS resolvers~\cite{hounsel
 We issued queries for three domains to each resolver: \texttt{google.com}, 
 \texttt{amazon.com}, and \texttt{wikipedia.com}.  We chose these domains based on their popularity, but
 other domain names would have likely sufficed.  We do not expect our choice of
-domain names to unfairly skew our performance comparisons between resolvers. Note that our selection of domains is quite realistic, because it is reasonable to expect that most people query sites that are already in cache. In our method, we capture the typical user experience.
+domain names to unfairly skew our performance comparisons between resolvers. 
+
+\paragraph{Caching}
+Note that our selection of domains is quite realistic, because it is reasonable to expect that most people query sites that are already in cache. 
+Therefore, in our method, we capture the typical user experience.
+We are primarily interested in the behavior of a resolver and the presence of cached entries enables a more controlled experiment.
 
 \paragraph{Measurement Procedure.} We performed the following steps to measure
 the performance of each of the encrypted DNS resolvers, from each of our three vantage points:

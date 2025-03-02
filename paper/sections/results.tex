@@ -43,8 +43,10 @@ broader set of encrypted DNS resolvers varied by geography.
 
 Figure~\ref{fig:dns-us-ohio} shows the distributions of DNS response times and
 ICMP ping times across encrypted DNS resolvers located in North America, as
-measured from an EC2 instance in Ohio.  The plots show distributions for both
-DNS response times and ICMP round-trip latency.  Although some distributions
+measured from an EC2 instance in Ohio. Note that some of these resolvers are anycasted,
+so they are not exclusively located in North America. However, the purpose of this analysis
+is more to understand how the resolvers perform from the perspective of the client.
+The plots show distributions for both DNS response times and ICMP round-trip latency.  Although some distributions
 extend beyond 600~ms, we have truncated the plots for ease of exposition,
 since responses beyond this range will not result in good application
 performance.  Certain resolvers did not respond to our ICMP ping probes; for

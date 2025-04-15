@@ -1,5 +1,6 @@
 %\documentclass[runningheads]{llncs}
-\documentclass[10pt,sigconf,letterpaper,anonymous,nonacm]{acmart}
+%\documentclass[10pt,sigconf,letterpaper,anonymous,nonacm]{acmart}
+\documentclass[10pt,sigconf,letterpaper]{acmart}
 
 % General
 % -------
@@ -17,6 +18,8 @@
 \usepackage{pdflscape}
 \usepackage{balance}
 \usepackage{subcaption}
+\settopmatter{printacmref=false}
+
 
 %\usepackage[skip=0.1cm]{parskip}
 %\setlength{\textfloatsep}{0pt}
@@ -47,9 +50,12 @@
 
 \begin{sloppypar}
 
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+        
 \maketitle
 
-\input{sections/abstract}
 \input{sections/introduction}
 \input{sections/background}
 \input{sections/method}

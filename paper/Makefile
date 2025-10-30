@@ -3,7 +3,7 @@ TARGET=paper
 all: pdf
 
 pdf:
-	latexmk -latexoption="-file-line-error -8bit" -xelatex $(TARGET).tex
+	latexmk -latexoption="-file-line-error -synctex=1" -pdf $(TARGET).tex
 
 clean:
 	latexmk -c

@@ -1,10 +1,14 @@
 %\documentclass[runningheads]{llncs}
-\documentclass[10pt,sigconf,letterpaper,anonymous,nonacm]{acmart}
+\documentclass[10pt,sigconf,letterpaper,nonacm]{acmart}
 
 % General
 % -------
 \usepackage[labelfont={small,bf},textfont={small,it},skip=1pt]{caption}
 \usepackage{graphicx}
+\graphicspath{{figures/}{./}}
+\makeatletter
+\def\input@path{{sections/}{./}}
+\makeatother
 \usepackage{booktabs}
 \usepackage{caption}
 \usepackage{tabularx}
@@ -12,8 +16,8 @@
 \usepackage{fancyref}
 \usepackage{xcolor}
 \usepackage{float}
-\usepackage{cite}
-\usepackage{amssymb}
+%\usepackage{cite} % Conflicts with natbib loaded by acmart
+%\usepackage{amssymb} % Already loaded by acmart
 \usepackage{pdflscape}
 \usepackage{balance}
 \usepackage{subcaption}
@@ -38,31 +42,41 @@
 
 %%%%%%%%%%%%%%%%%%%%  TITLE/AUTHORS  %%%%%%%%%%%%%%%%%%%%%
 
-\title{Global Measurements of the Availability and Response Times of \\ Public Encrypted DNS Resolvers}
-\author{}
-\institute{}
+\title{Global Measurements of the Availability and Response Times of Public Encrypted DNS Resolvers}
+
+\author{Ranya Sharma}
+\affiliation{%
+  \institution{University of Chicago}
+  \country{}
+}
+
+\author{Nick Feamster}
+\affiliation{%
+  \institution{University of Chicago}
+  \country{}
+}
 %%%%%%%%%%%%%%%%%%%%  START OF DOCUMENT  %%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 \begin{sloppypar}
 
-\maketitle
+\input{abstract}
 
-\input{sections/abstract}
-\input{sections/introduction}
-\input{sections/background}
-\input{sections/method}
-\input{sections/results}
-\input{sections/discussion}
-\label{lastpage}\input{sections/conclusion}
+\maketitle
+\input{introduction}
+\input{background}
+\input{method}
+\input{results}
+\input{discussion}
+\label{lastpage}\input{conclusion}
 
 \pagebreak
 \bibliographystyle{abbrv}
 \bibliography{paper}
 
 \pagebreak
-\input{sections/appendix}
+\input{appendix}
 
 \end{sloppypar}
 \end{document}
